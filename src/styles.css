@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  margin-left: 15px;
+  padding: 10px;
+}
+.weartherApp {
+  max-width: 500px;
+  margin: 20px auto;
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.Wearther-Info {
+  margin-bottom: 25px;
+}
+form {
+  display: block;
+  margin-top: 20px;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: grey;
+  font-size: 14px;
+  font-weight: 20px;
+}
