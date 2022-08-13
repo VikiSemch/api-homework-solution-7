@@ -26,7 +26,6 @@ function showCTD(response) {
   let temperatureElement = document.querySelector("#temperature");
   let citynameElement = document.querySelector("#cityname");
   let descritionElement = document.querySelector("#descrition");
-  let PrecipitationElement = document.querySelector("#Precipitation");
   let HumidityElement = document.querySelector("#Humidity");
   let WindElement = document.querySelector("#Wind");
   let dateElement = document.querySelector("#date");
@@ -37,6 +36,7 @@ function showCTD(response) {
   WindElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML =  Date(response.data.dt*1000);
 }
+console.log(response);
 let apiKey = "435bb05a3bd8ac1e2c4d7c0df7d0cd4b";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metic`;
 
