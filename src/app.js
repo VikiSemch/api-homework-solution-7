@@ -36,7 +36,7 @@ function showCTD(response) {
   descritionElement.innerHTML = response.data.weather[0].description;
   HumidityElement.innerHTML = response.data.main.humidity;
   WindElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML =  formatDate(response.data.date);
+  dateElement.innerHTML =  formatDate(response.data.dt * 1000);
 }
 
 let apiKey = "435bb05a3bd8ac1e2c4d7c0df7d0cd4b";
