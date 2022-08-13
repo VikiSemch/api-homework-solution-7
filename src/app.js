@@ -1,5 +1,5 @@
-function Date(response){
-let date= now.getDate();
+function formatDate(timestapm){
+let date= new Date(timestapm);
 
 let hours=date.getHours();
 
