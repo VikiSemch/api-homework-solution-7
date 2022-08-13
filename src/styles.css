@@ -35,3 +35,6 @@ li {
   font-size: 14px;
   font-weight: 20px;
 }
+li::first-letter{
+  text-transform: capitalize;
+}
