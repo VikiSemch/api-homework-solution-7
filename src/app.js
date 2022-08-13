@@ -34,7 +34,7 @@ function showCTD(response) {
   descritionElement.innerHTML = response.data.weather[0].description;
   HumidityElement.innerHTML = response.data.main.humidity;
   WindElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML =  Date(response.data.date*1000);
+  dateElement.innerHTML =  Date(response.data.dt*1000);
 }
 let apiKey = "435bb05a3bd8ac1e2c4d7c0df7d0cd4b";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metic`;
