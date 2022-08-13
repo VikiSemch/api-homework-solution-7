@@ -43,7 +43,7 @@ function showCTD(response) {
 }
 
 let apiKey = "435bb05a3bd8ac1e2c4d7c0df7d0cd4b";
-let city = "New York";
+let city = "Alicante";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metic`;
 
 axios.get(apiUrl).then(showCTD);
