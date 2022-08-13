@@ -6,7 +6,7 @@ let hours=date.getHours();
   if (hours < 10) {
   hours = "0" + hours;
 }
-let minutes = now.getMinutes();
+let minutes = date.getMinutes();
 if (minutes < 10) {
   hours = "0" + minutes;
 }
