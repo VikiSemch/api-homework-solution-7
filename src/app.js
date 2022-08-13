@@ -1,5 +1,6 @@
 function Date(response){
-let date= new Date(timestamp);
+let date= now.getDate();
+
 let hours=date.getHours();
 
   if (hours < 10) {
