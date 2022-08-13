@@ -1,30 +1,29 @@
-function formatDate(timestapm){
-let date= new Date(timestapm);
+function formatDate(timestapm) {
+  let date = new Date(timestapm);
 
-let hours=date.getHours();
+  let hours = date.getHours();
 
   if (hours < 10) {
-  hours = "0" + hours;
-}
-let minutes = date.getMinutes();
-if (minutes < 10) {
-  hours = "0" + minutes;
-}
+    hours = "0" + hours;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    hours = "0" + minutes;
+  }
   let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thuesday",
-  "Friday",
-  "Saturday"
-];
-let day=days[date.getDay()];
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thuesday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[date.getDay()];
 
-return`${day}${hours}:${minutes}`;
+  return `${day}${hours}:${minutes}`;
 }
 function showCTD(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let citynameElement = document.querySelector("#cityname");
   let descritionElement = document.querySelector("#descrition");
@@ -37,14 +36,17 @@ function showCTD(response) {
   descritionElement.innerHTML = response.data.weather[0].description;
   HumidityElement.innerHTML = response.data.main.humidity;
   WindElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML =  formatDate(response.data.dt * 1000);
-  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  iconElement.setAttribute("alt",response.data.weather[0].description);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
 function searchCity(cityname) {
   let apiKey = "435bb05a3bd8ac1e2c4d7c0df7d0cd4b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${apiKey}&units=metic`;
- axios.get(apiUrl).then(showCTD);
+  axios.get(apiUrl).then(showCTD);
 }
 
 function search(event) {
@@ -52,8 +54,7 @@ function search(event) {
   let citynameInputElement = document.querySelector("#search-input");
   searchCity(citynameInputElement.value);
 }
+searchCity("New York");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("click", search);
-
-
