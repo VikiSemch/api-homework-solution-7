@@ -1,3 +1,10 @@
+function Date(response){
+let date= new Date(timestamp);
+let hours=date.getHours();
+let minutes=date.getMinutes();
+let day=date.getDay();
+return`${day}${hours}:${minutes}`;
+}
 function showCTD(response) {
   let temperatureElement = document.querySelector("#temperature");
   let citynameElement = document.querySelector("#cityname");
@@ -11,7 +18,7 @@ function showCTD(response) {
   descritionElement.innerHTML = response.data.weather[0].description;
   HumidityElement.innerHTML = response.data.main.humidity;
   WindElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = response.data;
+  dateElement.innerHTML =  Date(response.data.date*1000);
   console.log(response.data);
 }
 let apiKey = "435bb05a3bd8ac1e2c4d7c0df7d0cd4b";
