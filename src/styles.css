@@ -49,7 +49,7 @@ li {
   line-height: 20px;
 }
 
-li::first-letter {
+li:first-letter {
   text-transform: capitalize;
 }
 small{
