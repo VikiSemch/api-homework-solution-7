@@ -70,6 +70,7 @@ function search(event) {
   searchCity(citynameInputElement.value);
 }
 searchCity("New York");
+let Celsiustemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("click", search);
@@ -77,5 +78,5 @@ form.addEventListener("click", search);
 let FahrenheitLink = document.querySelector("#fahrenheit-link");
 FahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
-let Celsiustemperature = document.querySelector("#cilsius-link");
+let CelsiusLink = document.querySelector("#cilsius-link");
 CelsiusLink.addEventListener("click", showCelsiusTemp);
