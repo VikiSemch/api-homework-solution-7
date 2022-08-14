@@ -1,12 +1,20 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+h1{
+  font-size:24px ;
+  color: grey;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 0;
+}
 .container {
   max-width: 500px;
   margin: 20px auto;
   margin-left: 15px;
   padding: 10px;
 }
+
 .weartherApp {
   max-width: 500px;
   margin: 20px auto;
@@ -14,8 +22,10 @@ body {
   padding: 10px;
   border: 1px solid black;
 }
+
 .Wearther-Info {
   margin-bottom: 25px;
+  
 }
 form {
   display: block;
@@ -23,18 +33,31 @@ form {
   border-bottom: 1px solid #f9f7fe;
   padding-bottom: 30px;
 }
+
 ul {
   margin: 0;
-  padding: 0;
+  padding:0;
 }
+
 li {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding:auto;
   color: grey;
-  font-size: 14px;
-  font-weight: 20px;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 20px;
 }
-li::first-letter{
+
+li::first-letter {
   text-transform: capitalize;
+}
+small{
+  max-width: 500px;
+  margin: 20px auto;
+  margin-left: 10px;
+  padding: 10px;
+}
+strong{
+  font-size: 45px;
 }
