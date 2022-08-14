@@ -47,11 +47,12 @@ temperatureElement.innerHTML = Math.round(Celsiustemperature);
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(Fahreheirtemperature);
+CelsiusLink.classList.remove("active");
+FahrenheitLink.classList.add("active");
+let temperatureElement = document.querySelector("#temperature");
   let Fahreheirtemperature = (Celsiustemperature * 9) / 5 + 32;
-    temperatureElement.innerHTML = Math.round(Fahreheirtemperature);
-}
-
+ }  
 function showCelsiusTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
